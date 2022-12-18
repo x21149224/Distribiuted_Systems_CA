@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package average;
+
+service AverageService{
+rpc calcAverage (stream Cities) returns (Average) {}
+}
+message Cities {
+string cityname = 1;
+double level = 2;
+}
+message Average {
+int32 cities = 1;
+double average = 2;
+}

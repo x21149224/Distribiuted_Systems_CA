@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package compare_pollution;
+
+service CalcService{
+    rpc subtract(CalcRequest) returns (CalcResponse) {}
+	rpc divide(CalcRequest) returns (CalcResponse) {}
+}
+
+message CalcRequest{
+    sint32 city1 = 1;
+    sint32 city2 = 2;
+}
+
+message CalcResponse{
+    sint32 result = 1;
+    string message = 2;
+}

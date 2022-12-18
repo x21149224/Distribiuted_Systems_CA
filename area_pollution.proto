@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package area_pollution;
+
+service RandomService{
+    rpc generateRandomComponent(RandomRequest) returns (stream RandomReply) {}
+}
+
+message RandomRequest{
+    uint32 amount = 1;
+}
+
+message RandomReply{
+    uint32 value = 1;
+}
